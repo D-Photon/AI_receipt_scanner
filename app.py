@@ -179,7 +179,7 @@ if uploaded_file is not None:
                 reasoning_effort="none",
 
                 temperature=0.2,
-                max_completion_tokens=2000
+                max_completion_tokens=800
                 )
 
                 # RESULT- AI OUTPUT
