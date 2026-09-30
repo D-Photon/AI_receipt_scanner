@@ -1,0 +1,7 @@
+streamlit
+groq
+Pillow
+SQLAlchemy
+psycopg[binary]
+python-dotenv
+pydantic
