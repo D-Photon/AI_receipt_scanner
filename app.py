@@ -141,7 +141,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
 
     st.image(
-        image, caption="Uploaded receipt", width="stretch"
+        image, caption="Uploaded receipt", width=400
     )
 
     analyse_button = st.button(
@@ -173,14 +173,14 @@ if uploaded_file is not None:
                         "name":"receipt_extraction",
                         "strict":True,
                         "schema":RECEIPT_SCHEMA
-                    }
-                },
+                    }},
+
 
                 reasoning_effort="none",
 
                 temperature=0.2,
-                max_completion_tokens=800
-                )
+                max_completion_tokens=800)
+
 
                 # RESULT- AI OUTPUT
 
@@ -273,8 +273,7 @@ if uploaded_file is not None:
                         product=item["product"],
                         total_price=item["total_price"],
                         quantity=item["quantity"],
-                        transaction_date=transaction_date
-                        )
+                        transaction_date=transaction_date)
 
                     save_document(transaction)
                     saved_count+=1
